@@ -9,3 +9,13 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+
+alias DetectorMatch.Repo
+alias DetectorMatch.Accounts.User
+
+Repo.insert! %User{
+  name: "Administrator",
+  email: "admin@example.com",
+  password: Comeonin.Bcrypt.hashpwsalt("admin")
+}

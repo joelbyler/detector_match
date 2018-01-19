@@ -20,6 +20,13 @@ defmodule DetectorMatchWeb.Router do
     resources "/users", UserController
   end
 
+  scope "/session", DetectorMatchWeb do
+    pipe_through [:browser]
+
+    get "/new", SessionController, :new
+    post "/identity/callback", SessionController, :identity_callback
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", DetectorMatchWeb do
   #   pipe_through :api

@@ -17,7 +17,14 @@ defmodule DetectorMatchWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    resources "/users", UserController
+    resources "/users", UserController, only: [:new, :create]
+
+  end
+
+  scope "/admin", DetectorMatchWeb do
+    pipe_through :browser # TODO: lock down admin routes
+
+    resources "/users", Admin.UserController
   end
 
   scope "/session", DetectorMatchWeb do

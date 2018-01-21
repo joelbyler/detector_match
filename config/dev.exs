@@ -55,4 +55,5 @@ config :detector_match, DetectorMatch.Repo,
   password: "postgres",
   database: "detector_match_dev",
   hostname: "localhost",
-  pool_size: 10
+  pool_size: 10,
+  types: DetectorMatch.PostgresTypes

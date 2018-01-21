@@ -18,7 +18,7 @@ defmodule DetectorMatchWeb.Router do
 
     get "/", PageController, :index
     resources "/users", UserController, only: [:new, :create]
-
+    resources "/addresses", AddressController
   end
 
   scope "/admin", DetectorMatchWeb do

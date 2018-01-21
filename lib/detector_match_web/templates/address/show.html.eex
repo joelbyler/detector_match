@@ -1,0 +1,13 @@
+<h2>Show Address</h2>
+
+<ul>
+
+  <li>
+    <strong>Label:</strong>
+    <%= @address.label %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: address_path(@conn, :edit, @address) %></span>
+<span><%= link "Back", to: address_path(@conn, :index) %></span>

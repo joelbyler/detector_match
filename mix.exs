@@ -44,7 +44,9 @@ defmodule DetectorMatch.Mixfile do
       {:comeonin, "~> 4.0"},
       {:bcrypt_elixir, "~> 1.0"},
       {:ueberauth, "~> 0.5"},
-      {:ueberauth_identity, "~> 0.2"}
+      {:ueberauth_identity, "~> 0.2"},
+      {:geo_postgis, "~> 1.0"},
+      {:geo, "~> 2.0"}
     ]
   end
 

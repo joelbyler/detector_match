@@ -9,6 +9,9 @@ use Mix.Config
 config :detector_match,
   ecto_repos: [DetectorMatch.Repo]
 
+config :detector_match, DetectorMatch.Repo,
+  extensions: [{Geo.PostGIS.Extension, library: Geo}]
+
 # Configures the endpoint
 config :detector_match, DetectorMatchWeb.Endpoint,
   url: [host: "localhost"],
